@@ -1,5 +1,14 @@
 /* styles.css - Estilos básicos para a landing page com variáveis de cor */
 :root {
+  --blue-yonder:#2E96F5;
+  --neon-blue: #0960E1;
+  --eletric-blue: #0042A6;
+  --deep-blue: #07173F;
+  --rocket-red: #E43700;
+  --martian-red: #8E1100;
+  --neon-yellow: #EAFE07;
+  --white: #FFFFFF;
+
   --color-bg-gradient-start: #0042A6;
   --color-bg-gradient-end: #07173F;
   --color-text-main: #07173F;
@@ -24,12 +33,74 @@
   padding:0px;
 }
 
+/* Estilo geral */
 body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', Arial, sans-serif;
-  background: linear-gradient(120deg, var(--color-bg-gradient-start), var(--color-bg-gradient-end));
+  font-family: Arial, sans-serif;
   color: var(--color-text-main);
+  background: linear-gradient(to bottom, var(--color-bg-gradient-start), var(--color-bg-gradient-end));
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+header {
+  background-color: var(--color-header-bg);
+  color: var(--color-header-title);
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 4px 10px var(--color-header-shadow);
+}
+
+header h1 {
+  font-size: 2.5rem;
+}
+
+header p {
+  color: var(--color-header-subtext);
+  font-size: 1.2rem;
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+  margin: 10px 0;
+}
+
+/* Seções de features */
+.feature {
+  height: 100vh; /* Ocupa 100% da altura da viewport */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  border-bottom: 2px solid var(--colot-feature-border);
+}
+
+#feature1 {
+  background-color: var(--color-feature-bg);
+  color: var(--color-feature-title);
+  box-shadow: 0 4px 10px var(--color-feature-shadow);
+}
+
+#feature2 {
+  background-color: var(--neon-blue);
+  color: var(--white);
+}
+
+#feature3 {
+  background-color: var(--rocket-red);
+  color: var(--color-btn-text);
+}
+
+/* Rodapé */
+.footer {
+  background-color: var(--color-footer-bg);
+  color: var(--color-footer-text);
+  text-align: center;
+  padding: 10px;
 }
 
 .header {
@@ -68,13 +139,6 @@ body {
 .cta-btn:hover {
   background: var(--color-btn-bg-hover);
 }
-.features {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 5px;
-  margin: 10px 0;
-}
 .feature {
   background: var(--color-feature-bg);
   /* border-radius: 16px; */
@@ -89,12 +153,14 @@ body {
   color: var(--color-feature-title);
 }
 .footer {
+  display:absolute;
   text-align: center;
   padding: 30px 0 10px 0;
   color: var(--color-footer-text);
   font-size: 1rem;
   background: var(--color-footer-bg);
-  margin-top: 10px;
+  height: 10%;
+
 }
 
 .logo {
