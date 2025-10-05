@@ -1,3 +1,43 @@
+@media (max-width: 900px) {
+  .text-block-left,
+  .text-block-right {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+}
+/* Bloco de texto destacado para melhor legibilidade */
+.text-block {
+  display: relative;
+  left: 0px;
+  background: rgba(0,0,0,0.55);
+  color: var(--white);
+  padding: 32px 28px;
+  max-width: 700px;
+  margin: 0 auto 24px auto;
+  box-shadow: 0 2px 24px 0 var(--color-feature-shadow);
+  border: none;
+  letter-spacing: 0.02em;
+  font-family: 'Fira Sans', 'Segoe UI', Arial, sans-serif;
+  transition: box-shadow 0.2s;
+  backdrop-filter: blur(8px);
+  height: 100%;
+  text-align: center;
+}
+
+.text-block h3 {
+  color: var(--neon-blue);
+  margin-bottom: 12px;
+    font-size: 4.5rem;
+}
+
+.text-block p, .text-block ul, .text-block li {
+  color: var(--white);
+  font-size: 1.13rem;
+  line-height: 1.7;
+  text-shadow: 0 1px 2px #000a;
+}
+
 /* styles.css - Estilos básicos para a landing page com variáveis de cor */
 :root {
   --blue-yonder:#2E96F5;
@@ -11,7 +51,7 @@
 
   --color-bg-gradient-start: #0042A6;
   --color-bg-gradient-end: #07173F;
-  --color-text-main: #07173F;
+  --color-text-main: var(--deep-blue);
   --color-header-bg: #07173F;
   --color-header-title: #FFFFFF;
   --color-header-subtext: #2E96F5;
@@ -52,9 +92,21 @@ body {
 }
 
 .header {
-  background: var(--color-header-bg);
-  padding: 40px 0 20px 0;
+  display: relative;
+  left: 0px;
+  background: rgba(0,0,0,0.55);
+  color: var(--white);
+  padding: 32px 28px;
+  margin: 0 auto 24px auto;
+  box-shadow: 0 2px 24px 0 var(--color-feature-shadow);
+  border: none;
+  letter-spacing: 0.02em;
+  font-family: 'Fira Sans', 'Segoe UI', Arial, sans-serif;
+  transition: box-shadow 0.2s;
+  backdrop-filter: blur(8px);
+  height: 100%;
   text-align: center;
+  height: fit-content;
   width: 100vw;
   /*box-shadow: 0px 1px 30px var(--color-header-shadow);*/
   color: var(--color-header-title);
@@ -85,41 +137,86 @@ body {
 
 /* Seções de features */
 .feature {
+  position: relative;
   height: 100vh; /* Ocupa 100% da altura da viewport */
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: start;
   text-align: center;
-  padding: 20px;
-  background: var(--color-feature-bg);
-  /* border-radius: 16px; */
   padding: 30px 25px;
   width: 100%;
-  text-align: center;
   border: 100px solid var(--color-feature-border);
-  box-shadow: 0 4px 24px var(--color-feature-shadow);
+  /*box-shadow: 0 10px 24px var(--color-feature-shadow);*/
+  z-index: 1;
+  overflow: hidden;
+}
+.text-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.feature::before, .feature::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  z-index: 2;
+  pointer-events: none;
+}
+.feature::before {
+  top: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.85) 60%, rgba(0,0,0,0) 100%);
+  filter: blur(6px);
+}
+.feature::after {
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.85) 60%, rgba(0,0,0,0) 100%);
+  filter: blur(6px);
 }
 
 .feature h3 {
-  margin-bottom: 10px;
   color: var(--color-feature-title);
+  filter: blur(0px);
+}
+
+#feature0 {
+  background-image: url('assets/img/space4.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 #feature1 {
-  background-color: var(--color-feature-bg);
-  color: var(--color-feature-title);
-  box-shadow: 0 4px 10px var(--color-feature-shadow);
+  background-image: url('assets/img/space4.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 #feature2 {
-  background-color: var(--neon-blue);
-  color: var(--white);
+  background-image: url('assets/img/space4.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 #feature3 {
-  background-color: var(--rocket-red);
-  color: var(--color-btn-text);
+  background-image: url('assets/img/space4.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+#feature4 {
+  background-image: url('assets/img/space4.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+#feature5 {
+  background-image: url('assets/img/earth1.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 /* Rodapé */
