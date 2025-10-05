@@ -2,8 +2,9 @@
 :root {
   --color-bg-gradient-start: #0042A6;
   --color-bg-gradient-end: #07173F;
-  --color-text-main: #FFFFFF;
+  --color-text-main: #07173F;
   --color-header-bg: #07173F;
+  --color-header-title: #FFFFFF;
   --color-header-subtext: #2E96F5;
   --color-header-shadow:#FFFFFF;
   --color-btn-bg: #E43700;
@@ -35,7 +36,8 @@ body {
   background: var(--color-header-bg);
   padding: 40px 0 20px 0;
   text-align: center;
-  box-shadow: 0px 1px 30px var(--color-header-shadow);
+  /*box-shadow: 0px 1px 30px var(--color-header-shadow);*/
+  color: var(--color-header-title);
 }
 .header h1 {
   font-size: 3rem;
@@ -92,7 +94,7 @@ body {
   color: var(--color-footer-text);
   font-size: 1rem;
   background: var(--color-footer-bg);
-  margin-top: 40px;
+  margin-top: 10px;
 }
 
 .logo {
