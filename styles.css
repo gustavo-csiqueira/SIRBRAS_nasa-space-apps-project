@@ -1,17 +1,17 @@
 /* styles.css - Estilos básicos para a landing page com variáveis de cor */
 :root {
-  --color-bg-gradient-start: #0f2027;
-  --color-bg-gradient-end: #2c5364;
-  --color-text-main: #fff;
-  --color-header-bg: rgba(0,0,0,0.7);
-  --color-header-subtext: #b0c4de;
-  --color-btn-bg: #00c6ff;
-  --color-btn-bg-hover: #0072ff;
-  --color-btn-text: #fff;
+  --color-bg-gradient-start: #0042A6;
+  --color-bg-gradient-end: #07173F;
+  --color-text-main: #FFFFFF;
+  --color-header-bg: #07173F;
+  --color-header-subtext: #2E96F5;
+  --color-btn-bg: #E43700;
+  --color-btn-bg-hover: #8E1100;
+  --color-btn-text: #FFFFFF;
   --color-feature-bg: rgba(255,255,255,0.08);
-  --color-feature-title: #00c6ff;
+  --color-feature-title: #FFFFFF;
   --color-feature-shadow: rgba(0,0,0,0.2);
-  --color-footer-bg: rgba(0,0,0,0.5);
+  --color-footer-bg: #07173F;
   --color-footer-text: #b0c4de;
 }
 
@@ -27,6 +27,7 @@ body {
   background: var(--color-header-bg);
   padding: 40px 0 20px 0;
   text-align: center;
+  box-shadow: 0px 1px 30px var(--color-feature-title);
 }
 .header h1 {
   font-size: 3rem;
@@ -63,7 +64,7 @@ body {
   background: var(--color-feature-bg);
   border-radius: 16px;
   padding: 30px 25px;
-  max-width: 320px;
+  width: 80%;
   text-align: center;
   box-shadow: 0 4px 24px var(--color-feature-shadow);
 }
@@ -79,6 +80,22 @@ body {
   background: var(--color-footer-bg);
   margin-top: 40px;
 }
+
+.logo {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+}
+
+.logo img{
+  display: block;
+  height: 100%;
+  width: auto;
+}
+
 @media (max-width: 900px) {
   .features {
     flex-direction: column;
