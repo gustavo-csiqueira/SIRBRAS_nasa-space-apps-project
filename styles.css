@@ -26,7 +26,7 @@
   background: rgba(0,0,0,0.55);
   color: var(--white);
   padding: 32px 28px;
-  max-width: 700px;
+  max-width: 70vw;
   margin: 0 auto 24px auto;
   box-shadow: 0 2px 24px 0 var(--color-feature-shadow);
   border: none;
@@ -73,7 +73,7 @@
   --color-btn-bg-hover: #8E1100;
   --color-btn-text: #FFFFFF;
   --color-feature-bg: #FFFFFF;
-  --color-feature-title: #0042A6;
+  --color-feature-title: var(--white);
   --color-feature-shadow: rgba(0,0,0,0.2);
   --colot-feature-border: #07173F;
   --color-footer-bg: #07173F;
@@ -128,6 +128,9 @@ body {
 .header h1 {
   font-size: 3rem;
   letter-spacing: 2px;
+  color: var(--color-header-title);
+  font-size: 4.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .header h2 {
@@ -164,6 +167,9 @@ body {
   /*box-shadow: 0 10px 24px var(--color-feature-shadow);*/
   z-index: 1;
   overflow: hidden;
+  background-image: url('assets/img/space4.jpg');
+  background-size: cover;
+  background-position: center;
 }
 .text-block {
   display: flex;
@@ -280,6 +286,10 @@ body {
   display: block;
   height: 100%;
   width: auto;
+}
+
+img {
+  margin: 30px;
 }
 
 @media (max-width: 900px) {
