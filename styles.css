@@ -1,3 +1,16 @@
+/* Animações de surgimento para os text-blocks */
+.text-block.hidden {
+  opacity: 0;
+  transform: translateY(60px) scale(0.98);
+  filter: blur(8px);
+  /* transição controlada via JS */
+}
+.text-block.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0);
+  /* transição controlada via JS */
+}
 @media (max-width: 900px) {
   .text-block-left,
   .text-block-right {
@@ -111,6 +124,7 @@ body {
   /*box-shadow: 0px 1px 30px var(--color-header-shadow);*/
   color: var(--color-header-title);
 }
+
 .header h1 {
   font-size: 3rem;
   letter-spacing: 2px;
@@ -143,7 +157,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: start;
-  text-align: center;
+  /* text-align: center; */
   padding: 30px 25px;
   width: 100%;
   border: 100px solid var(--color-feature-border);
