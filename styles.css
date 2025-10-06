@@ -34,7 +34,7 @@
   font-family: 'Fira Sans', 'Segoe UI', Arial, sans-serif;
   transition: box-shadow 0.2s;
   backdrop-filter: blur(8px);
-  height: 100%;
+  height: 100vh;
   text-align: center;
 }
 
@@ -181,19 +181,19 @@ body {
 .feature::before, .feature::after {
   content: "";
   position: absolute;
-  left: 0;
-  width: 100%;
+  left: -5%;
+  width: 110%;
   height: 80px;
   z-index: 2;
   pointer-events: none;
 }
 .feature::before {
-  top: 0;
+  top: -5%;
   background: linear-gradient(to bottom, rgba(0,0,0,0.85) 60%, rgba(0,0,0,0) 100%);
   filter: blur(6px);
 }
 .feature::after {
-  bottom: 0;
+  bottom: -5%;
   background: linear-gradient(to top, rgba(0,0,0,0.85) 60%, rgba(0,0,0,0) 100%);
   filter: blur(6px);
 }
@@ -210,34 +210,48 @@ body {
 }
 
 #feature1 {
-  background-image: url('assets/img/space4.jpg');
+  background-image: url('assets/img/space3.jpg');
   background-size: cover;
   background-position: center;
 }
 
 #feature2 {
-  background-image: url('assets/img/space4.jpg');
+  background-image: url('assets/img/EarthIndustry.jpg');
   background-size: cover;
   background-position: center;
 }
 
 #feature3 {
-  background-image: url('assets/img/space4.jpg');
+  background-image: url('assets/img/Lab.png');
   background-size: cover;
   background-position: center;
 }
 
-#feature4 {
-  background-image: url('assets/img/space4.jpg');
+.fheader {
+  background-color: black;
+  background-image: none;
   background-size: cover;
   background-position: center;
 }
 
 #feature5 {
-  background-image: url('assets/img/earth1.jpg');
+  background-image: url('assets/img/ProteinCrystalGrowth.jpg');
   background-size: cover;
   background-position: center;
 }
+
+#feature6 { background-image: url('assets/img/SiliconWafer.jpg'); }
+
+#feature8 { background-image: url('assets/img/RocketLaunch.jpg'); }
+
+#feature9 { background-image: url('assets/img/Roboticarm.png'); }
+
+#feature10 { background-image: url('assets/img/Landing.jpg'); }
+
+#feature12 { background-image: url('assets/img/moon.jpg'); }
+
+#feature13 { background-image: url('assets/img/cloud.jpg'); }
+
 
 /* Rodapé */
 .footer {
